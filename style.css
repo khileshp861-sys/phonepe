@@ -8,38 +8,44 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: rgb(15, 15, 15);
+    overflow: hidden; /* hide main body scroll */
 }
 
-.main{
-      height: 100%;
+/* Scrollable container inside main, if needed */
+.main {
+    height: 100%;
     width: 100%;
     max-width: 480px;
     display: flex;  
-flex-direction: column;
+    flex-direction: column;
+    overflow-y: scroll; /* allow scrolling inside main */
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-nav{
-    width: 100%;
+
+.main::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
-nav img{
-width: 100%;
-}
+
 nav {
+    width: 100%;
     position: sticky;
     top: 0%;
     z-index: 999;
 }
-.scr,.scr img,.fp,.fp img,footer ,footer img{
+
+nav img {
+    display: block;
     width: 100%;
 }
 
-nav img, .scr img {
-  display: block; /* removes inline gap */
-  width: 100%;
+.scr, .scr img, .fp, .fp img, footer, footer img {
+    width: 100%;
 }
 
 .scr, nav {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 footer {
