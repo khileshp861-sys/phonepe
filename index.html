@@ -3,24 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Web App</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main">
-    <nav>
-        <img src="IMG_20260217_073729.jpg.jpeg" alt="">
-    </nav>
-    <div class="scr">
-        <img src="1.jpeg" alt="">
-        <img src="2.jpeg" alt="">
-        <img src="3.jpeg" alt="">
-        <img src="4.jpeg" alt="">
+        <nav>
+            <img src="IMG_20260217_073729.jpg.jpeg" alt="">
+        </nav>
 
+        <div class="scr">
+            <img src="1.jpeg" alt="">
+            <img src="2.jpeg" alt="">
+            <img src="3.jpeg" alt="">
+            <img src="4.jpeg" alt="">
+        </div>
+
+        <div class="fp">
+            <img src="IMG_20260217_080029.jpg.jpeg" alt="">
+        </div>
+
+        <img src="5.jpeg" alt="">
+
+        <footer>
+            <img src="home1.jpeg" alt="">
+        </footer>
     </div>
-    <div class="fp"><img src="IMG_20260217_080029.jpg.jpeg" alt=""></div>
-   
-<img src="5.jpeg" alt="">
-    <footer><img src="home1.jpeg" alt=""></footer></div>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js");
+            });
+        }
+    </script>
 </body>
 </html>
